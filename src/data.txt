@@ -1,9 +1,0 @@
-#f48e28 - orange
-#ffffff - white
-#000000 - black
-#b6b6b6 - gray
-#f5ddc4 - tangerine
-
-{
-    name: "
-}
