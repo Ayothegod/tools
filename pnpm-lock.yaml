@@ -11,6 +11,9 @@ dependencies:
   astro:
     specifier: ^4.2.1
     version: 4.2.1
+  lucide:
+    specifier: ^0.314.0
+    version: 0.314.0
   resend:
     specifier: ^3.0.0
     version: 3.0.0
@@ -2124,6 +2127,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide@0.314.0:
+    resolution: {integrity: sha512-MErc+Ku1tZMSUrDNw67jxF/Yj0e+CBFYo43/i4A2Isz6WMHBi+VWZ+9nnK36LOvEZ+GDxHeA4m93OR1hKlPZTg==}
     dev: false
 
   /magic-string@0.30.5:
