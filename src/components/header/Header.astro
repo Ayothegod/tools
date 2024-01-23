@@ -1,13 +1,14 @@
 ---
 import Logo from "../../assets/Untitled-1 1.png"
-import Navbar from "./Navbar.astro"
+import Navbar from "./Navbar"
+// import Navbar from "./Navbar.astro"
 
 ---
 
 <main class="h-14 flex justify-between px-2 py-2 ">
     <img src={Logo.src} alt="logo" height="60" width="60">
 
-    <Navbar/>
+    <Navbar client:load/>
 <!-- 
     <div class="shadow-md h-fit rounded-sm px-2 py-2">
         <input type="text" placeholder="Search" class="hidden sm:block placeholder:text-black placeholder:font-semibold outline-none sm:w-60">
