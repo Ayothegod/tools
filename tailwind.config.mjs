@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        orange: "#f48e28",
-        // gray: "#b6b6b6",
-        tangerine: "#f5ddc4",
+        primary: "#f48e28",
+        secondary: "#b6b6b6",
+        alternate: "#f5ddc4",
       },
     },
   },

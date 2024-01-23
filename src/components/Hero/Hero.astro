@@ -1,0 +1,30 @@
+---
+import deliveryImage from "../../assets/delivery.png"
+import playButton from "../../assets/Play Button.png"
+import Button from "../Hero/Button.astro"
+---
+
+<main class="px-4 mt-10 flex">
+    <div class="space-y-10 md:flex-1">
+        <div class="bg-alternate flex items-center w-fit p-1 rounded-full">
+            <p class="font-semibold text-primary ml-2 mr-8 text-sm">Bike Delivery</p>
+            <img src={deliveryImage.src} alt="delivery-image" class="h-6 w-6 bg-white rounded-full">
+        </div>
+
+        <div class="space-y-8">
+            <p class="text-5xl font-bold">The Fastest Delivery In <span class="text-primary">Your City</span></p>
+
+            <p class="text-sm leading-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aspernatur iste tenetur voluptates quaerat quod deserunt ex nihil. Adipisci, facilis!</p>
+        </div>
+
+        <div class="flex items-center ">
+            <Button text="Order Now"/>
+            <img src={playButton.src} alt="play button" class="h-16 w-16">
+            <p class="font-semibold">Order Process</p>
+        </div>
+    </div>
+
+    <div class="hidden md:block md:flex-1 ">
+        Hello
+    </div>
+</main>
