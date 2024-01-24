@@ -11,6 +11,9 @@ export default {
       boxShadow: {
         custom: "2px 2px 5px rgba(0,0,0,.1), -2px -2px 5px rgba(0,0,0,.1)",
       },
+      screens: {
+        xs: "450px",
+      },
       // update sm and md width length
     },
   },
