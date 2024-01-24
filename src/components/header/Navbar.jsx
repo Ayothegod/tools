@@ -8,16 +8,16 @@ export default function Navbar() {
     <main>
       <div className="hidden sm:flex">
         <ul className="flex gap-4">
-          <a href="#home" className=" font-semibold ">
+          <a href="#home" className="hover:underline font-semibold ">
             <li>Home</li>
           </a>
-          <a href="#menu" className=" font-semibold ">
+          <a href="#menu" className="hover:underline font-semibold ">
             <li>Menu</li>
           </a>
-          <a href="#services" className=" font-semibold">
+          <a href="#services" className="hover:underline font-semibold">
             <li>Services</li>
           </a>
-          <a href="#shop" className=" font-semibold">
+          <a href="#shop" className="hover:underline font-semibold">
             <li>Shop</li>
           </a>
         </ul>
