@@ -5,8 +5,8 @@ export default function Recipe() {
   const data = ["first", "second", "third", "fourth"];
   return (
     <main className="grid grid-cols-2 gap-y-16 gap-x-8">
-      {data.map((data) => (
-        <div className="h-36 w-32 bg-white rounded-md shadow p-2 relative">
+      {data.map((data, idx) => (
+        <div key={idx} className="h-36 w-32 bg-white rounded-md shadow p-2 relative">
           <div></div>
           <div className="flex flex-col items-center justify-end h-full">
             <p className="font-semibold">Food Combo</p>

@@ -8,6 +8,9 @@ export default {
         secondary: "#b6b6b6",
         alternate: "#f5ddc4",
       },
+      boxShadow: {
+        custom: "2px 2px 5px rgba(0,0,0,.1), -2px -2px 5px rgba(0,0,0,.1)",
+      },
     },
   },
   plugins: [],
