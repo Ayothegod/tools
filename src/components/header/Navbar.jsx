@@ -33,6 +33,7 @@ export default function Navbar() {
           className={`fixed top-14 right-0 bg-white transform transition-transform ease-in-out duration-300 text-black border-2 p-2  border-black rounded-md ${
             openMenu ? "-translate-x-2" : "translate-x-full"
           }`}
+          onClick={() => setOpenMenu(!openMenu)}
         >
           <ul className="">
             <li className="font-semibold text-lg hover:bg-gray-200 px-4 py-1 rounded-md">
