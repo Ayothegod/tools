@@ -40,7 +40,7 @@ export default function ServiceItem() {
           </div>
 
           <p className="font-bold text-lg ">{data.topic}</p>
-          <p className="text-xs text-center font-medium">{data.content}</p>
+          <p className="text-sm text-center font-medium">{data.content}</p>
         </div>
       ))}
     </main>
