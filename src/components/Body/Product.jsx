@@ -1,5 +1,7 @@
 import React from "react";
-import test from "../../assets/burger3.jpg";
+import test from "../../assets/burger3.jpg"
+import { Star } from "lucide-react";
+
 
 export default function Product() {
   const data = [1, 2, 3, 4, 5, 6];
@@ -15,8 +17,8 @@ export default function Product() {
                 <button className="bg-primary py-2 px-4 text-sm font-bold rounded-full hover:bg-orange-600 text-white">Add to Cart</button>
             </div>
             <div className="space-y-2">
-                <div className="text-xs text-gray-400 ml-auto">
-                    {/* start icon */}
+                <div className="text-xs text-gray-400 ml-auto flex  items-center gap-2">
+                    <Star className="h-4 w-4 text-primary"/>
                     <p>4.9</p>
                 </div>
                 <p className="text-sm font-semibold">$15.00</p>
