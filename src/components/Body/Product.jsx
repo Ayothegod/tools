@@ -12,7 +12,7 @@ export default function Product() {
           <div className="flex items-center justify-between w-full p-4">
             <div className="space-y-2">
                 <p className="text-lg font-bold">Gyro Sandwich</p>
-                <button className="bg-primary py-2 px-4 text-sm font-bold rounded-md hover:bg-orange-600 text-white">Add to Cart</button>
+                <button className="bg-primary py-2 px-4 text-sm font-bold rounded-full hover:bg-orange-600 text-white">Add to Cart</button>
             </div>
             <div className="space-y-2">
                 <div className="text-xs text-gray-400 ml-auto">

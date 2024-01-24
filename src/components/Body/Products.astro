@@ -1,10 +1,19 @@
 ---
-import Product from "./Product"
+import Product from "./Product";
+import { Clock5 } from "lucide-react";
 ---
 
 <main class="my-10" id="menu">
-    <p class=" text-center text-sm text-primary font-semibold">Product</p>
-    <p class="text-center text-2xl font-bold">Most Popular Items</p>
+  <p class="text-center text-sm text-primary font-semibold">Product</p>
+  <p class="text-center text-2xl font-bold">Most Popular Items</p>
 
-    <Product/>
+  <Product />
+
+  <div class="flex items-center justify-center mt-4">
+    <button
+      class="flex items-center gap-1 font-bold text-white bg-primary p-2 rounded-full hover:bg-orange-600"
+    >
+      See More Recipe
+    </button>
+  </div>
 </main>
