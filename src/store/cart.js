@@ -1,22 +1,39 @@
-import { atom, map } from 'nanostores'
+import { atom, map } from "nanostores";
 
-export const $counter = atom(0)
+export const $isCartOpen = atom(false);
 
-export const cartItems = map({})
+export const $cartItems = atom([]);
 
-export function addCartItem({ id, name }) {
-  const existingEntry = cartItems.get()[id];
-  if (existingEntry) {
-    cartItems.setKey(id, {
-      ...existingEntry,
-      quantity: existingEntry.quantity + 1,
-    })
-    console.log("Going")   
-} else {
-    cartItems.setKey(
+export const $addItemsToCart = (id, item, price, quantity, store) => {
+  const checkItem = $cartItems.get().some(item => item.id === id)
+
+  if (checkItem) {
+    const newArray = $cartItems.set(
+      $cartItems.get().map(item => {
+        if(item.id === id){
+          return {...item, quantity: quantity + 1}
+        }
+        return item
+      })
+    )
+
+    return [...$cartItems.get(), newArray ]
+    // $cartItems.set([
+    //   $cartItems.get().map(item => {
+    //     item.quantity = item.quantity + 1
+    //   })
+    // ])
+    console.log("wow");
+    console.log($cartItems.get());
+  } else {
+    $cartItems.set([
+      ...$cartItems.get(),
+      {
         id,
-        { id, name, quantity: 1 }
-        );
-        console.log("Going noy")   
+        item,
+        price,
+        quantity,
+      },
+    ]);
   }
-}
+};
