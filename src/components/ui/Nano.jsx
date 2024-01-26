@@ -5,13 +5,17 @@ import { $isCartOpen, $cartItems, $addItemsToCart } from "../../store/cart";
 export default function NanoUI() {
   const isCartOpen = useStore($isCartOpen);
   const cartItems = useStore($cartItems);
-  console.log(cartItems);
+
   const openCart = () => {
     $isCartOpen.set(!isCartOpen);
   };
 
   const addToCart = () => {
-    $addItemsToCart(1, "Chinese shoe", "$20", 1)
+    $addItemsToCart(1, "Chinese shoe", "20", 1)
+  }
+
+  const totalPrice = (price, quantity) => {
+    return Number(price) * quantity
   }
 
   return (
@@ -51,7 +55,17 @@ export default function NanoUI() {
               }
 
               {
+                cartItems.map(item => (
+                  <div key={item.id}>
+                    <p>{item.item}</p>
+                    <p>{item.price}</p>
+                    <p>{item.quantity}</p>
 
+                    <div>
+                      <p>Total price: {totalPrice(item.price, item.quantity)}</p>
+                    </div>
+                  </div>
+                ))
               }
             </div>
           )}
