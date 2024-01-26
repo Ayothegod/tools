@@ -6,18 +6,18 @@ import { fetchData } from "../../hooks/useFetch";
 
 const data = await fetchData()
 export default function Product() {
-  console.log(data);
+  console.log(data.map(data => data.food));
   
   return (
     <div className="mt-10 grid xs:grid-cols-2 md:grid-cols-3 gap-4">
       {/* <button onClick={addToCart} className="border-2">update</button> */}
-
+{/* data.food. */}
       {data.map((data, id) => (
         <div key={id} className="rounded-md shadow-custom overflow-hidden">
-          <img src={test.src} alt="test" className="h-48 w-full " />
+          <img src={data.food.image} alt="test" className="h-48 w-full object-cover" />
           <div className="flex items-center justify-between w-full p-4">
             <div className="space-y-2">
-              <p className="text-lg font-bold">Gyro Sandwich</p>
+              <p className="text-lg font-bold">{data.food.knownAs}</p>
               <button className="bg-primary py-2 px-4 text-sm font-bold rounded-full hover:bg-orange-600 text-white">
                 Add to Cart
               </button>
