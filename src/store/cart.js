@@ -1,6 +1,6 @@
 import { atom, map } from "nanostores";
 
-export const $isCartOpen = atom(false);
+// export const $isCartOpen = atom(false);
 
 export const $cartItems = atom([]);
 
