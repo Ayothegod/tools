@@ -1,33 +1,33 @@
 import { atom, map } from "nanostores";
+import toast from "react-hot-toast";
 
-// export const $isCartOpen = atom(false);
+export const $basketItems = atom([]);
 
-export const $cartItems = atom([]);
-
-export const $addItemsToCart = (id, item, price, quantity) => {
-  const checkItem = $cartItems.get().some(item => item.id === id)
+export const $addItemsToBasket = (image, name, foodData) => {
+  const checkItem = $basketItems.get().some((item) => item.name === name);
 
   if (checkItem) {
-    // return a modal that says item already in cart and increased by one
-    const newArray = $cartItems.set(
-      $cartItems.get().map(item => {
-        if(item.id === id){
-          return {...item, quantity: item.quantity + 1}
-        }
-        return item
-      })
-    )
+    toast.error("Recipe already in basket.", { duration: 2000 });
+    // const newArray = $basketItems.set(
+    //   $basketItems.get().map(item => {
+    //     if(item.id === id){
+    //       return {...item, quantity: item.quantity + 1}
+    //     }
+    //     return item
+    //   })
+    // )
 
-    return [...$cartItems.get(), newArray ]
+    // return [...$basketItems.get(), newArray ]
+    return;
   } else {
-    // returnn a modal that says item increased by one
-    $cartItems.set([
-      ...$cartItems.get(),
+    toast.success("Recipe added to basket.");
+
+    $basketItems.set([
+      ...$basketItems.get(),
       {
-        id,
-        item,
-        price,
-        quantity,
+        image,
+        name,
+        foodData,
       },
     ]);
   }
