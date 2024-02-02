@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BasketClient from "../components/basket/Basket"
+---
+
+<Layout title="Foodmart - Basket">
+  <main class="max-w-[1028px] mx-auto font-sans px-4 my-4 md:my-10 flex flex-col justify-between sm:flex-row">
+
+    <div>
+        <h2 class="text-2xl font-bold text-primary">Basket</h2>
+        <BasketClient client:load/>
+    </div>
+
+    <!-- checkout -->
+    <div class="p-2 md:p-4 w-full sm:w-64 md:w-96 shadow-custom">
+        <h2 class="text-lg font-bold">Checkout Tab</h2>
+        <div></div>
+    </div>
+  </main>
+</Layout>

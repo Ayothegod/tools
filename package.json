@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.1.0",
+    "@nanostores/persistent": "^0.9.1",
     "@nanostores/react": "^0.7.1",
     "@react-email/components": "^0.0.14",
     "@react-email/render": "^0.0.12",
