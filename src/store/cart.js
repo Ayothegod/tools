@@ -10,7 +10,7 @@ export const $shoppingBasket = persistentAtom("cart", [], {
 });
 
 export const $removeItemFromBasket = (name) => {
-  // toast.success("Recipe removed from basket.");
+  toast.success("Recipe removed from basket.");
  return $shoppingBasket.set(
     $shoppingBasket.get().filter((item) => item.name !== name)
   );

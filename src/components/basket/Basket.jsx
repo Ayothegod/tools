@@ -1,18 +1,18 @@
 import { useStore } from "@nanostores/react";
 import React from "react";
 import { $shoppingBasket, $removeItemFromBasket } from "../../store/cart";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Basket() {
   const basketItems = useStore($shoppingBasket);
-  console.log(basketItems);
   const removeRecipeFromBasket = (name) => {
     $removeItemFromBasket(name)
-    console.log(name);
   }
 
   return (
     <div className="mt-8 flex flex-col gap-8">
-      {basketItems.map((item) => (
+      <Toaster/>
+      {basketItems.length ? basketItems.map((item) => (
         <div key={item.name} className="xs:flex sm:flex-col md:flex-row gap-4">
           <img
             src={item.image}
@@ -54,7 +54,7 @@ export default function Basket() {
               </button>
           </div>
         </div>
-      ))}
+      )) : <p>Your basket is empty...</p>}
     </div>
   );
 }
