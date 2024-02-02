@@ -3,16 +3,18 @@ import test from "../../assets/burger3.jpg";
 import { Star } from "lucide-react";
 import { fetchData } from "../../hooks/useFetch";
 import { useStore } from "@nanostores/react";
-import { $addItemsToBasket, $basketItems } from "../../store/cart";
+import {
+  $addItemsToBasket,
+  $shoppingBasket,
+} from "../../store/cart";
 import toast, { Toaster } from "react-hot-toast";
 
 const data = await fetchData();
 export default function Product() {
-  const basketItems = useStore($basketItems);
+  const basketItems = useStore($shoppingBasket);
 
   const addRecipeToBasket = (image, name, foodData) => {
-    $addItemsToBasket(image, name, foodData)
-    // toast("Here is your toast.");
+    $addItemsToBasket(image, name, foodData);
   };
 
   return (
@@ -38,7 +40,7 @@ export default function Product() {
                 }
                 className="bg-primary py-2 px-4 text-sm font-bold rounded-full hover:bg-orange-600 text-white"
               >
-                Add to Cart
+                Add to Basket
               </button>
             </div>
             <div className="space-y-2">
