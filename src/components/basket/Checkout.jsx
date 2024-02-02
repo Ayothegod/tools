@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function Checkout() {
+    const [email, setEmail] = useState("")
   const checkout = () => {};
   return (
     <div className="mt-4">
       <input
         type="text"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         placeholder="enter email address..."
         className="border border-gray-300 rounded-full p-2 outline-primary w-full"
       />
