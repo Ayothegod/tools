@@ -19,7 +19,7 @@ export default function CheckoutTab() {
         ))}
       </div>
 
-      <button className="bg-primary py-2 px-4 text-sm font-bold rounded-full hover:bg-orange-600 text-white mt-4">
+      <button onClick={() => window.location.href = "/checkout"} className="bg-primary py-2 px-4 text-sm font-bold rounded-full hover:bg-orange-600 text-white mt-4">
         Checkout
       </button>
     </div>
