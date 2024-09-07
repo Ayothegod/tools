@@ -11,5 +11,7 @@ import db from '@astrojs/db';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), tailwind(), react(), db()]
+  integrations: [mdx(), tailwind({
+    applyBaseStyles: false,
+  }), react(), db()]
 });
