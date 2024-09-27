@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import MemojiImage from "@/assets/images/memoji-computer.png"
+import { ArrowDown } from "lucide-react";
+// import ArrowDown from "@/assets/icons/arrow-down.svg"
+---
+
+<div>
+  <div class="container">
+    <Image src={MemojiImage} alt="Person peeking from behind laptop" />
+    <div>
+      <div></div>
+      <div>Available for new projects</div>
+    </div>
+
+    <h1>Building Exceptional User Experiences</h1>
+    <p>I specialise in tramsforming designs into functional, high-performing web applications. Let's discuss your next project.</p>
+
+    <div>
+      <button>
+        <ArrowDown/>ArrowDown
+        <span>Explore my work</span>
+      </button>
+    </div>
+  </div>
+</div>

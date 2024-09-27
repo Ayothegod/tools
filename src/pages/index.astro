@@ -1,16 +1,11 @@
 ---
+import "@/styles/global.css";
 import Layout from '../layouts/Layout.astro';
-import "@/styles/global.css"
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/sections/Header";
+import Hero from "@/components/sections/Hero.astro";
 ---
 
-<Layout title="Coldmetal - Tools">
-	<main>
-		<h1 class="text-center">Welcome to cold metal tools</span></h1>
-	</main>
-	<Button>Hello Brothers</Button>
+<Layout title="My Portfolio">
+	<Header/>
+	<Hero/>
 </Layout>
-
-<style>
-	
-</style>
