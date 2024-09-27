@@ -15,7 +15,11 @@ export default {
         md: "2rem",
       },
     },
-    extend: {},
+    extend: {
+			fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+		},
     // extend: {
     // 	borderRadius: {
     // 		lg: 'var(--radius)',

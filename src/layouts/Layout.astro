@@ -1,4 +1,6 @@
 ---
+import { twMerge } from 'tailwind-merge';
+
 interface Props {
 	title: string;
 }
@@ -16,12 +18,12 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class={twMerge("antialiased font-inter bg-gray-900 text-white")}>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	html {
+	/* html {
 		font-family: system-ui, sans-serif;
-	}
+	} */
 </style>
